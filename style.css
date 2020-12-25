@@ -4,9 +4,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --browser-body-text: #CCD6F6;
+
+  --primary-background-color: #0A192F;
+  --secondary-background-color: #162846;
+  --card-title: #64FFDA;
+  --card-text: #fff;
+
+  --toggle-button-primary: #CCD6F6;
+  --toggle-button-secondary: #000;
+}
+
+html {
+  transition: all 0.5 ease-in;
+}
+
+html.light {
+  --primary-background-color: #DDE4E7;
+  --secondary-background-color: #3277B3;
+  --card-title: #F9EC31;
+  --card-text: #CCD6F6;
+  --browser-body-text: #2C699E;
+  
+}
+
 body {
-  background-color: #0A192F;
-  color: #CCD6F6;
+  background-color: var(--primary-background-color);
+  color: var(--browser-body-text);
   font-family: 'Roboto Mono', sans-serif;
   font-size: 24px;
   display: flex;
@@ -16,6 +41,27 @@ body {
   text-align: center;
   height: 100%;
   margin: 0;
+}
+
+.toggle {
+  cursor: pointer;
+  background-color: var(--toggle-button-primary);
+  color: var(--toggle-button-secondary);
+  font-family: 'Roboto Mono';
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.toggle:focus {
+  outline: 0;
+}
+
+.toggle:active {
+  transform: translateY(1px);
 }
 
 .container {
@@ -41,7 +87,7 @@ p {
 }
 
 .project-card {
-  background-color: #162846;
+  background-color: var(--secondary-background-color);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -57,7 +103,7 @@ p {
 }
 
 .project-card p {
-  color: #fff;
+  color: var(--card-text);
   font-size: 18px;
   margin: 0;
   padding: 0 5px;
@@ -70,7 +116,7 @@ p {
 }
 
 .project-title a {
-  color: #64FFDA;
+  color: var(--card-title);
   font-size: 24px;
   text-decoration: none;
   margin: 10px;
@@ -79,7 +125,7 @@ p {
 
 
 p a {
-  color: #fff;
+  color: var(--card-text);
   text-decoration: none;
 }
 
