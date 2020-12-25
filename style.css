@@ -6,12 +6,10 @@
 
 :root {
   --browser-body-text: #CCD6F6;
-
   --primary-background-color: #0A192F;
   --secondary-background-color: #162846;
   --card-title: #64FFDA;
   --card-text: #fff;
-
   --toggle-button-primary: #CCD6F6;
   --toggle-button-secondary: #000;
 }
@@ -22,11 +20,12 @@ html {
 
 html.light {
   --primary-background-color: #DDE4E7;
-  --secondary-background-color: #3277B3;
-  --card-title: #F9EC31;
-  --card-text: #CCD6F6;
+  --secondary-background-color: #527b9e;
+  --card-title: #f7bf49;
+  --card-text: #fff;
   --browser-body-text: #2C699E;
-  
+  --toggle-button-primary: #354e79;
+  --toggle-button-secondary: #fff;
 }
 
 body {
