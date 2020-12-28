@@ -15,7 +15,7 @@
 }
 
 html {
-  transition: all 0.5 ease-in;
+  transition: all 0.5s ease-in;
 }
 
 html.light {
@@ -133,8 +133,8 @@ h3:focus {
   outline: 0;
 }
 
-/* media query used here to stack elements in browser body if screen smaller than 580px*/
-@media(max-width: 768px) {
+/* media query used here to stack elements in browser body if screen smaller than 800px*/
+@media(max-width: 800px) {
   .container {
     flex-direction: column;
     flex-wrap: wrap;
