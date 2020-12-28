@@ -1,12 +1,19 @@
 const canvas = document.getElementById('canvas');
+const increaseBtn = document.getElementById('increase');
+const decreaseBtn = document.getElementById('decrease');
+const sizeEl = document.getElementById('size');
+const colorEl = document.getElementById('color');
+const clearEl = document.getElementById('clear');
+
 const ctx = canvas.getContext('2d');
 
-let size = 20;
+let size = 10;
 let isPressed = false; // isPressed is when mouse is down; will togggle using event listener
 let color = 'black';
 let x;
 let y;
 
+// deal with drag and drop mouse events
 canvas.addEventListener('mousedown', (event) => {
   isPressed = true;
 
@@ -62,4 +69,30 @@ function drawLine(x1, y1, x2, y2) {
   ctx.stroke();
 }
 
-// deal with drag and drop mouse events
+function updateSizeonScreen() {
+  sizeEl.innerText = size;
+}
+
+increaseBtn.addEventListener('click', () => {
+  size += 5;
+
+  if(size > 50) {
+    size = 50;
+  }
+
+  updateSizeonScreen();
+})
+
+decreaseBtn.addEventListener('click', () => {
+  size -= 5;
+
+  if(size < 5) {
+    size = 5;
+  }
+
+  updateSizeonScreen();
+})
+
+colorEl.addEventListener('change', (event) => color = event.target.value);
+
+clearEl.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height));
