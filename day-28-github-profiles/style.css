@@ -40,7 +40,7 @@ body {
   color: #bbb;
 }
 
-.user-form input: focus {
+.user-form input:focus {
   outline: none;
 }
 
