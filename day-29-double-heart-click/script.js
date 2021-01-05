@@ -4,6 +4,7 @@ const times = document.querySelector('#times');
 let clickTime = 0;
 let timesClicked = 0;
 
+// creates a custom 'dblclick' style event listener that sets a time threshold between clicks
 loveMe.addEventListener('click', (event) => {
   if(clickTime === 0) {
     clickTime = new Date().getTime()
